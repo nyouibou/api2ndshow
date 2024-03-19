@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     await fetchData();
   }
 
-  updateData() async {
+  addData() async {
     await Provider.of<Homescreencontroller>(context, listen: false).addData();
     // to refetch
     await fetchData();
@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
               MaterialPageRoute(
                 builder: (context) => AddDataScreen(),
               ));
-          await updateData();
+          await addData();
         },
       ),
     );
